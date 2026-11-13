@@ -71,7 +71,7 @@ function App() {
   }
 
   async function buscarCor(e) {
-    e.preventDefault();ual
+    e.preventDefault();
     setStatus('carregando')
     setdadosCor(null) 
 
@@ -95,10 +95,10 @@ function App() {
       const url = new URL(endpoint);
       // Inclusão de parâmetros de consulta
       url.searchParams.append(chave, valor)
-      url.searchParams.append("format", "json")
-
+      
       if (schema !== "default") {
         url.searchParams.append("mode", schema)
+
         switch (schema) {
           case "monochrome": url.searchParams.append("count", 5); break
           case "analogic": url.searchParams.append("count", 3); break
@@ -106,6 +106,8 @@ function App() {
           case "triad": url.searchParams.append("count", 3); break
           case "quad": url.searchParams.append("count", 4); break
         }
+
+      url.searchParams.append("format", "json")
       }
         const resp = await fetch(url)
         const dados = await resp.json()
@@ -136,7 +138,7 @@ function App() {
           </Formulario>
             <Container>
               {status === 'esperando' ? <Feedback feedback={feedback}></Feedback> :
-                status === 'carregando' ? <p>Carregando...</p> : 
+                status === 'carregando' ? <p style={{fontWeight: '700', fontSize: '0.98rem', color: 'black'}}>Carregando...</p> : 
                   status === 'erro' ? <Feedback feedback={feedback}></Feedback> : 
                       schema === 'default' ? <Default dadosCor={dadosCor}></Default> : <Schema dadosCor={dadosCor}></Schema>
               }

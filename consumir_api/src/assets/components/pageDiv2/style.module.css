@@ -28,6 +28,8 @@
 }
 
 .formulario label {
+  display: block;
+  width: 100%;
   min-width: 0;
 }
 
@@ -41,6 +43,8 @@
   color: #242437;
   background: #fafaff;
   font: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
   transition:
     border-color 0.2s,
     box-shadow 0.2s;
@@ -117,6 +121,35 @@
   overflow-wrap: anywhere;
 }
 
+/* =========================================
+   CAIXA DE FEEDBACK
+========================================= */
+
+.feedbackBox {
+  width: fit-content;
+  max-width: 100%;
+  min-height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: #ffffff;
+  border: 1.5px solid #dcd9e8;
+  border-radius: 14px;
+  box-shadow: 
+    0 4px 16px rgba(42, 34, 83, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  margin: 0.5rem 0;
+}
+
+.feedbackTexto {
+  margin: 0;
+  color: #1e1b30;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
 .cardInterativo {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -190,10 +223,50 @@
     padding: 16px;
     border-radius: 19px;
   }
+
+  .formulario {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .formulario label {
+    grid-column: 1 / -1;
+    width: 100%;
+    order: 1;
+  }
+
+  .formulario input {
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px; /* Evita zoom automático no iOS Safari e garante leitura confortável */
+  }
+
+  .select {
+    order: 2;
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .formulario button {
+    order: 3;
+    width: 100%;
+    min-height: 46px;
+  }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 440px) {
   .pageDiv2 {
     padding: 12px;
+  }
+
+  .formulario {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .select,
+  .formulario button {
+    grid-column: 1 / -1;
   }
 }

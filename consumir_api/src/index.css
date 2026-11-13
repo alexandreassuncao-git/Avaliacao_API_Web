@@ -88,3 +88,19 @@ form {
 code {
     font-size: 100%;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #12111a;
+    color: #e6e5f0;
+  }
+  .pageDiv2, .formulario {
+    background: #1b1926;
+    border-color: #2b283d;
+  }
+  .formulario input, .select {
+    background: #242233;
+    color: #f0eff8;
+    border-color: #38344e;
+  }
+}

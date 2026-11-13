@@ -4,16 +4,20 @@ function Intro() {
   return (
     <>
       <section className={style.intro}>
-        <h1 style={{textAlign: "center"}}>The Color API</h1>
+        <h1 style={{textAlign: "center"}}>Bem-Vindo</h1>
         <div style={{textAlign: "justify"}}>
           <h2>Contextualização!</h2>
           <p>Os formatos <strong>HEX</strong>, <strong>RGB</strong> e <strong>HSL</strong> são os padrões mais utilizados para definir cores em páginas web através de HTML e CSS. Cada um possui uma lógica própria de funcionamento:</p>
           <ul>
-            <li><strong>HEX (Hexadecimal):</strong> Utiliza uma combinação de 6 caracteres alfanuméricos divididos em três pares (de 00 a FF). Eles representam a intensidade das cores primárias da luz, respectivamente: Vermelho (RR), Verde (GG) e Azul (BB). Exemplo: #FF0000 (vermelho puro).</li> <br />
-            <li><strong>RGB (Red, Green, Blue):</strong> Baseia-se no sistema de luz aditiva das telas, combinando as três cores primárias em canais distintos. Cada canal recebe um valor numérico inteiro de 0 a 255. Exemplo: rgb(255, 0, 0).</li> <br />
+            <li><strong>HEX (Hexadecimal):</strong> Utiliza uma combinação de 6 caracteres alfanuméricos divididos em três pares (de 00 a FF). Eles representam a intensidade das cores primárias da luz, respectivamente: Vermelho (RR), Verde (GG) e Azul (BB). Exemplo: #FF0000 (vermelho puro).</li>
+            <li><strong>RGB (Red, Green, Blue):</strong> Baseia-se no sistema de luz aditiva das telas, combinando as três cores primárias em canais distintos. Cada canal recebe um valor numérico inteiro de 0 a 255. Exemplo: rgb(255, 0, 0).</li>
             <li><strong>HSL (Hue, Saturation, Lightness):</strong> É considerado o modelo mais intuitivo para humanos, pois imita a forma como percebemos e escolhemos as cores no <a href="https://www.avmakers.com.br/blog/circulo-cromatico" target='_blank'>círculo cromático.</a>
             <ul>
-              <li><strong>H — Matiz (Hue):</strong> A cor em si, representada em graus no círculo cromático de 0° a 360°. Referências: 0°/360° (vermelho), 120° (verde) e 240° (azul).</li>
+              <li><strong>H — Matiz (Hue):</strong> A cor em si, representada em graus no círculo cromático de 0° a 360°
+                <ul>
+                  <li><em>Primárias:</em> 0°/360° (vermelho), 120° (verde) e 240° (azul).</li>
+                  <li><em>Secundárias:</em> 60° (amarelo), 180° (ciano) e 300° (magenta).</li>
+                </ul></li>
               <li><strong>S — Saturação (Saturation):</strong> A pureza ou intensidade da cor, variando de 0% (cinza neutro) até 100% (a cor totalmente viva).</li>
               <li><strong>L — Luminosidade (Lightness):</strong> O quão clara ou escura a cor é, variando de 0% (preto absoluto) até 100% (branco absoluto). O valor de 50% representa a cor em sua tonalidade padrão.</li>
             </ul>

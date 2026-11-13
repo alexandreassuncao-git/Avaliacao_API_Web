@@ -3,8 +3,8 @@ import style from './style.module.css'
 function Feedback({ feedback }) {
   return (
     <>
-      <div style={{width: 'fit-content'}} className={style.div}>
-          <p>{feedback}</p>
+      <div className={`${style.div} ${style.feedbackBox}`}>
+          <p className={style.feedbackTexto}>{feedback}</p>
       </div>
     </>
   );
