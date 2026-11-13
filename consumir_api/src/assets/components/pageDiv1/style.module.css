@@ -1,0 +1,36 @@
+/* =========================================
+   DIV EXTERNA
+========================================= */
+
+.pageDiv1 {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0 36px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 640px) {
+  .pageDiv1 {
+    padding-top: 48px;
+    padding-bottom: 28px;
+  }
+
+  .intro {
+    margin-bottom: 28px;
+  }
+
+  .intro p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .pageDiv1 {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}

@@ -1,0 +1,199 @@
+/* =========================================
+   DIV INTERNA
+========================================= */
+
+.pageDiv2 {
+  padding: 22px;
+  border: 1px solid rgba(231, 229, 241, 0.9);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 24px 70px rgba(42, 34, 83, 0.07);
+}
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.formulario {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e9e8f1;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(35, 27, 75, 0.06);
+  margin-bottom: 1rem;
+}
+
+.formulario label {
+  min-width: 0;
+}
+
+.formulario input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 15px;
+  border: 1px solid #e7e6ef;
+  border-radius: 11px;
+  outline: none;
+  color: #242437;
+  background: #fafaff;
+  font: inherit;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.formulario input:focus,
+.select:focus {
+  border-color: #8a70f5;
+  box-shadow: 0 0 0 3px rgba(122, 91, 239, 0.13);
+}
+
+.formulario input::placeholder {
+  color: #a1a1b1;
+}
+
+.formulario button {
+  min-height: 46px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 11px;
+  color: #fff;
+  background: linear-gradient(135deg, #7657f6, #9874f8);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.formulario button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 16px rgba(118, 87, 246, 0.25);
+}
+
+/* =========================================
+   SELECT
+========================================= */
+
+.select {
+  min-height: 46px;
+  max-width: 100%;
+  padding: 0 34px 0 12px;
+  border: 1px solid #e7e6ef;
+  border-radius: 11px;
+  outline: none;
+  color: #555468;
+  background: #fafaff;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* =========================================
+   CONTAINER E RESULTADOS
+========================================= */
+
+.container {
+  width: 100%;
+}
+
+.div{
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+  padding: 22px;
+  border-radius: 16px;
+  overflow: hidden;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  overflow-wrap: anywhere;
+}
+
+.cardInterativo {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  user-select: none;
+}
+
+.cardInterativo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.nomeCor {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.badgeCopia {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(4px);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.codigoLinha {
+  font-family: monospace;
+  font-size: 0.88rem;
+  opacity: 0.92;
+}
+
+.defaultColor {
+  width: min(220px, 100%);
+  margin: 1rem 0;
+}
+
+.div:first-line {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Esquemas de cores */
+
+.schema {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 640px) {
+  .pageDiv2 {
+    padding: 16px;
+    border-radius: 19px;
+  }
+}
+
+@media (max-width: 380px) {
+  .pageDiv2 {
+    padding: 12px;
+  }
+}
